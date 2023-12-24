@@ -20,6 +20,7 @@ html {
 body {
     position: relative;
     max-width: 1200px; 
+    min-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
     background: white;
@@ -207,19 +208,22 @@ footer > p {
     flex-direction: column;
 }
 #dining-local > .dining-card-group > .dining-card > img {
-    height: 200px;
+    height: 20vw;
+    max-height: 200px;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: 0 40%;
 }
 #dining-american > .dining-card-group > .dining-card > img {
-    height: 300px;
+    height: 25vw;
+    max-height: 300px;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: 0 50%;
 }
 #dining-misc > .dining-card-group > .dining-card > img {
-    height: 400px;
+    height: 40vw;
+    max-height: 400px;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: 0 60%;
