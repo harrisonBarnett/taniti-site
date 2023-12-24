@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title pageName="accommodations">Accommodations</title>
+    <link rel="stylesheet" href="../index.css"></link>
+</head>
+<body>
+    <header>
+        <div id="header-title-group">
+            <h1>Taniti</h1>
+            <h2><em>Where Paradise Comes To Life</em></h2>
+        </div>
+
+        <img src="../assets/coast.avif" alt="The coast of Taniti."/>
+    </header>
+    <nav>
+        <ul>
+            <a href="../index.html" class="nav-unselect" data="home"><li>Home</li></a>
+            <a href="./travel.html" class="nav-unselect" data="travel"><li>Travel</li></a>
+            <a href="./accommodations.html" data="accommodations"><li>Accomodations</li></a>
+            <a href="./transportation.html" data="transportation"><li>Transportation</li></a>
+            <a href="./dining.html" data="dining"><li>Dining</li></a>
+            <a href="./attractions.html" data="attractions"><li>Attractions</li></a>
+            <a href="./about.html" data="about"><li>About</li></a>
+        </ul>
+        <form>
+            <input type="text" />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    
+    <main id="accommodations-content">
+       <section id="accommodations-clamshell">
+            <div class="page-section-feature">
+                <h2>A 4-Star Experience</h2>
+                <img src="../assets/hotelroom.avif" alt="The Clamshell hotel" />
+            </div>
+            <div class="page-section-copy">
+                <p>Nestled along the pristine shores of Taniti, <strong>The Clamshell Hotel</strong> stands as a beacon of luxury and comfort, earning its esteemed status as a 4-star retreat in this tropical haven. The architecture, reminiscent of elegant clamshells, seamlessly blends with the natural surroundings, offering a harmonious fusion of modern sophistication and island charm.</p>
+                <br />
+                <p>With spacious, well-appointed rooms boasting breathtaking ocean views, guests at The Clamshell are treated to a sanctuary of relaxation. Indulge in culinary delights at the on-site restaurants, unwind by the azure pool, or rejuvenate body and soul at the spa.</p>
+                <br />
+                <p>Book your home away from home for as little as <strong>$79/night</strong> <a href="https://www.hotels.com" target="_blank">here</a>.</p>
+            </div>
+       </section>
+       <section id="accommodations-hostel">
+            <div class="page-section-copy">
+                <p>Taniti's hostels embody the spirit of communal adventure, providing budget-conscious travelers with a welcoming and vibrant atmosphere. Whether you choose a beachside dorm or a cozy village enclave, these hostels offer a unique blend of affordability and social connectivity. Embracing the island's laid-back ethos, Taniti's hostels become lively hubs where like-minded explorers share stories and forge new friendships.</p>
+                <br />
+                <p>With simple yet comfortable accommodations, these hostels immerse guests in the local experience, fostering a sense of camaraderie amidst the tropical beauty that surrounds them.</p>
+            </div>
+            <div class="page-section-feature">
+                <h2>For The Adventerous</h2>
+                <img src="../assets/hostel.avif" alt="The Reef hostel" />
+            </div>
+       </section>
+       <section id="accommodations-bnb">
+            <div class="page-section-feature">
+                <h2>Local Hospitality</h2>
+                <img src="../assets/bnb.avif" alt="A row of bed and breakfasts." />
+            </div>
+            <div class="page-section-copy">
+                <p>Taniti's bed and breakfast scene exudes a charm that seamlessly intertwines with the island's warm hospitality. Quaint and inviting, these accommodations offer a personalized touch, making guests feel like cherished friends rather than mere visitors.</p>
+                <br />
+                <p>Nestled in picturesque corners of the island, Taniti's bed and breakfast establishments often boast cozy rooms adorned with local artistry and furnishings that capture the essence of the tropical surroundings.</p>
+            </div>
+       </section>
+    </main>
+
+    <footer><p>Copyright 2023 Sunny Solutions Inc.</p></footer>
+
+    <script>
+        function getCurrentTab() {
+            const title = document.querySelector("title").getAttribute("pageName");
+            const nav = document.querySelector(`a[data="${title}"]`);
+            nav.classList.remove("nav-unselect");
+            nav.classList.add("nav-select");
+        }
+        getCurrentTab();
+    </script>
+</body>
+</html>

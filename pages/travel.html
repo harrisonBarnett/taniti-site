@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title pageName="travel">Travel</title>
+    <link rel="stylesheet" href="../index.css"></link>
+</head>
+<body>
+    <header>
+        <div id="header-title-group">
+            <h1>Taniti</h1>
+            <h2><em>Where Paradise Comes To Life</em></h2>
+        </div>
+
+        <img src="../assets/coast.avif" alt="The coast of Taniti."/>
+    </header>
+    <nav>
+        <ul>
+            <a href="../index.html" class="nav-unselect" data="home"><li>Home</li></a>
+            <a href="./travel.html" class="nav-unselect" data="travel"><li>Travel</li></a>
+            <a href="./accommodations.html" data="accommodations"><li>Accomodations</li></a>
+            <a href="./transportation.html" data="transportation"><li>Transportation</li></a>
+            <a href="./dining.html" data="dining"><li>Dining</li></a>
+            <a href="./attractions.html" data="attractions"><li>Attractions</li></a>
+            <a href="./about.html" data="about"><li>About</li></a>
+        </ul>
+        <form>
+            <input type="text" />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    
+    <main id="travel-content">
+        <section id="travel-airport">
+            <div class="page-section-feature">
+                <h2>By Air...</h2>
+                <img src="../assets/airstrip.avif" alt="The Tanitian airstrip." />
+            </div>
+            <div class="page-section-copy">
+                <p>Taniti's enchanting airstrip not only provides a stunning arrival experience, framed by swaying palms and overlooking azure waters, but it also serves as the gateway to your tropical getaway. Booking airfare to Taniti ensures a seamless transition from the hustle of daily life to the tranquility of our island paradise. </p>
+                <br/>
+                <p>As your plane touches down on this idyllic landing strip, you'll immediately sense the allure of Taniti, beckoning you to embark on a journey filled with sun-soaked adventures and unforgettable moments.</p>
+                <br />
+                <a href="https://www.expedia.com" target="_blank">Book your flight today.</a>
+            </div>
+            
+        </section>
+        <section id="travel-cruise">
+            <div class="page-section-copy">
+                <p>Embark on an unforgettable maritime adventure as your cruise ship gracefully docks at Taniti's vibrant port, surrounded by the beauty of the tropical seascape. Booking a cruise to Taniti not only offers a seamless passage to paradise but also introduces you to the rhythm of the island life from the moment you step ashore.</p>
+                <br />
+                <p>As you disembark, the promise of sun-soaked beaches and the vibrant pulse of Taniti's culture unfold, inviting you to explore a destination where every wave carries the whispers of a unique and unforgettable experience.</p>
+                <br />
+                <a href="https://www.travelocity.com" target="_blank">Book your cruise today.</a>
+            </div>
+            <div class="page-section-feature">
+                <h2>...By Sea.</h2>
+                <img src="../assets/cruise.avif" alt="The Tanitian cruise ship port." />
+            </div>
+        </section>
+    </main>
+
+    <footer><p>Copyright 2023 Sunny Solutions Inc.</p></footer>
+
+    <script>
+        function getCurrentTab() {
+            const title = document.querySelector("title").getAttribute("pageName");
+            const nav = document.querySelector(`a[data="${title}"]`);
+            nav.classList.remove("nav-unselect");
+            nav.classList.add("nav-select");
+        }
+        getCurrentTab();
+    </script>
+</body>
+</html>

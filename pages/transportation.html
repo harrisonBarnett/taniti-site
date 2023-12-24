@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title pageName="transportation">Transportation</title>
+    <link rel="stylesheet" href="../index.css"></link>
+</head>
+<body>
+    <header>
+        <div id="header-title-group">
+            <h1>Taniti</h1>
+            <h2><em>Where Paradise Comes To Life</em></h2>
+        </div>
+
+        <img src="../assets/coast.avif" alt="The coast of Taniti."/>
+    </header>
+    <nav>
+        <ul>
+            <a href="../index.html" class="nav-unselect" data="home"><li>Home</li></a>
+            <a href="./travel.html" class="nav-unselect" data="travel"><li>Travel</li></a>
+            <a href="./accommodations.html" data="accommodations"><li>Accomodations</li></a>
+            <a href="./transportation.html" data="transportation"><li>Transportation</li></a>
+            <a href="./dining.html" data="dining"><li>Dining</li></a>
+            <a href="./attractions.html" data="attractions"><li>Attractions</li></a>
+            <a href="./about.html" data="about"><li>About</li></a>
+        </ul>
+        <form>
+            <input type="text" />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    
+    <main id="transportation-content">
+       <section id="transportation-taxis">
+            <div class="page-section-feature">
+                <h2>Taxi And Car Rental</h2>
+                <img src="../assets/taxi.avif" alt="A taxicab." />
+            </div>
+            <div class="page-section-copy">
+                <p>Navigating Taniti is effortlessly convenient with a range of transportation options that cater to every explorer. Taxis, adorned with vibrant island colors, stand ready to whisk you away to your desired destination, offering a comfortable and efficient way to traverse the island's scenic routes with rates averaging around <strong>$2.99/round trip</strong>.</p>
+                <br />
+                <p>For those who prefer the freedom of independent exploration, car rentals on Taniti provide a key to unlock the hidden gems of the landscape. From compact cars to spacious SUVs, these rentals offer the flexibility to embark on spontaneous adventures, ensuring that every corner of the island is within reach for those seeking to discover Taniti at their own pace.</p>
+            </div>
+       </section>
+       <section id="transportation-public">
+            <div class="page-section-copy">
+                <p>Taniti's public transit system reflects the laid-back rhythm of island life, providing an authentic and leisurely means of exploring the tropical wonders. Colorful buses adorned with local art traverse the main routes from 5 a.m. til 11 p.m., offering both locals and visitors an affordable and communal way to experience the beauty of the island.</p>
+                <br />
+                <p>With scheduled stops at key attractions and villages, Taniti's public transit encourages a relaxed pace, allowing passengers to soak in the scenic views and connect with the vibrant local culture.</p>
+            </div>
+            <div class="page-section-feature">
+                <h2>Tried And True</h2>
+                <img src="../assets/bus.avif" alt="The Taniti bus depot." />
+            </div>
+       </section>
+       <section id="transportation-bikes">
+            <div class="page-section-feature">
+                <h2>Push Yourself</h2>
+                <img src="../assets/bikes.avif" alt="A group of bikers." />
+            </div>
+            <div class="page-section-copy">
+                <p>The local biking culture epitomizes the island's commitment to eco-friendly exploration and active leisure. Vibrant rental shops dot the landscape, offering a fleet of bicycles that become the perfect companions for those seeking a more intimate connection with the tropical surroundings.</p>
+                <br />
+                <p>From beach cruisers to rugged mountain bikes, Taniti's rental options cater to various preferences, allowing adventurers to pedal along the island's scenic coastal paths or venture into the lush interior. Do be mindful of our strictly enforced helmet laws.</p>
+            </div>
+       </section>
+    </main>
+
+    <footer><p>Copyright 2023 Sunny Solutions Inc.</p></footer>
+
+    <script>
+        function getCurrentTab() {
+            const title = document.querySelector("title").getAttribute("pageName");
+            const nav = document.querySelector(`a[data="${title}"]`);
+            nav.classList.remove("nav-unselect");
+            nav.classList.add("nav-select");
+        }
+        getCurrentTab();
+    </script>
+</body>
+</html>

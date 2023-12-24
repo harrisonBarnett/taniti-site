@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title pageName="home">Welcome Home</title>
+    <link rel="stylesheet" href="index.css"></link>
+</head>
+<body>
+    <header>
+        <div id="header-title-group">
+            <h1>Taniti</h1>
+            <h2><em>Where Paradise Comes To Life</em></h2>
+        </div>
+
+        <img src="assets/coast.avif" alt="The coast of Taniti."/>
+    </header>
+    <nav>
+        <ul>
+            <a href="index.html" class="nav-unselect" data="home"><li>Home</li></a>
+            <a href="pages/travel.html" class="nav-unselect" data="travel"><li>Travel</li></a>
+            <a href="pages/accommodations.html" data="accommodations"><li>Accomodations</li></a>
+            <a href="pages/transportation.html" data="transportation"><li>Transportation</li></a>
+            <a href="pages/dining.html" data="dining"><li>Dining</li></a>
+            <a href="pages/attractions.html" data="attractions"><li>Attractions</li></a>
+            <a href="pages/about.html" data="about"><li>About</li></a>
+        </ul>
+        <form>
+            <input type="text" />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+
+    <main id="home-content">
+        <section id="home-welcome">
+            <img src="assets/rainforest.avif" alt="The lush rainforest of Taniti."/>
+            <div>
+                <h2>Welcome Home</h2>
+                <p> Welcome to Taniti, a slice of paradise nestled in the heart of the azure waters of the tropics! As you step onto our pristine shores, you'll be greeted by the gentle lull of palm trees swaying in the warm breeze, and the rhythmic melody of waves caressing the sandy beaches.</p>
+                <br />
+                <p>Taniti invites you to embark on a journey of tranquility and tropical enchantment. Immerse yourself in the vibrant hues of our coral reefs, discover the hidden treasures of lush rainforests, and let the sun-kissed landscapes awaken your sense of adventure.</p>
+            </div>
+        </section>
+        <section id="home-attractions">
+            <div>
+                <h2>Immerse Yourself</h2>
+                <p>Dive into the heart of Taniti's rich culture and natural wonders by immersing yourself in our local attractions. Whether you're exploring the vibrant markets, where the colors of handmade crafts come to life, or embarking on a trek through the lush rainforest to discover hidden waterfalls, each step unveils a new layer of the island's enchantment.</p>
+                <br />
+                <a href="./attractions.html">Follow to find out more.</a>
+            </div>
+            <img src="assets/museum.avif" alt="The Tanitian history museum." />
+            <img src="assets/volcano.avif" alt="Taniti's active volcano." />
+        </section>
+        <section id="home-dining">
+            <img src="assets/localfood1.avif" alt="A plate of food from Tanitian restaurant Beaches." />
+            <img src="assets/localfood2.avif" alt="A plate of food from Tanitian restaurant The Blue." />
+            <div>
+                <h2>Small Island, Big Flavors</h2>
+                <p>Indulge your taste buds in a culinary journey that mirrors Taniti's diverse and vibrant spirit. Our island's cuisine is a delightful fusion of fresh, local ingredients and exotic flavors that dance on your palate. From succulent seafood caught just off our shores to tropical fruits bursting with sweetness, each dish is a celebration of the bounties nature graciously provides.</p>
+                <br />
+                <a href="pages/dining.html">Follow to find out more.</a>
+            </div>
+        </section>
+        <section id="home-travel">
+            <h2>Come And Stay Awhile</h2>
+            <div>
+                <div>
+                    <img src="assets/hotelroom.avif" alt="A hotel room at the Clamshell Hotel." />
+                    <p>Taniti's hotel accommodations offer a seamless blend of luxury and natural charm, providing a haven for relaxation amidst the tropical beauty.</p>
+                </div>
+                <div>
+                    <img src="assets/airstrip.avif" alt="The Tanitian airstrip." />
+                    <p>Taniti's airstrip, framed by swaying palms and overlooking the crystal-clear waters, welcomes travelers with a picturesque landing point that effortlessly captures the essence of island paradise.</p>
+                </div>
+                <div>
+                    <img src="assets/parking.avif" alt="Street parking in Taniti." />
+                    <p>Cruise through the lush landscapes in comfortable cars or rent a stylish convertible to enjoy the scenic views while experiencing the ease of transportation on our picturesque roads.</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer><p>Copyright 2023 Sunny Solutions Inc.</p></footer>
+
+    <script>
+        function getCurrentTab() {
+            const title = document.querySelector("title").getAttribute("pageName");
+            const nav = document.querySelector(`a[data="${title}"]`);
+            nav.classList.remove("nav-unselect");
+            nav.classList.add("nav-select");
+        }
+        getCurrentTab();
+    </script>
+</body>
+</html>

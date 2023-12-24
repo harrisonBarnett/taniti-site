@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title pageName="attractions">Attractions</title>
+    <link rel="stylesheet" href="../index.css"></link>
+</head>
+<body>
+    <header>
+        <div id="header-title-group">
+            <h1>Taniti</h1>
+            <h2><em>Where Paradise Comes To Life</em></h2>
+        </div>
+
+        <img src="../assets/coast.avif" alt="The coast of Taniti."/>
+    </header>
+    <nav>
+        <ul>
+            <a href="../index.html" class="nav-unselect" data="home"><li>Home</li></a>
+            <a href="./travel.html" class="nav-unselect" data="travel"><li>Travel</li></a>
+            <a href="./accommodations.html" data="accommodations"><li>Accomodations</li></a>
+            <a href="./transportation.html" data="transportation"><li>Transportation</li></a>
+            <a href="./dining.html" data="dining"><li>Dining</li></a>
+            <a href="./attractions.html" data="attractions"><li>Attractions</li></a>
+            <a href="./about.html" data="about"><li>About</li></a>
+        </ul>
+        <form>
+            <input type="text" />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    
+    <main id="attractions-content">
+        <section id="travel-airport">
+            <div class="page-section-feature">
+                <h2>Beat The Boredom...</h2>
+                <img src="../assets/museum.avif" alt="The Tanitian history museum." />
+            </div>
+            <div class="page-section-copy">
+                <strong>The Taniti History Museum</strong>
+                <p>Uncover the rich tapestry of Taniti's past at The Taniti History Museum, where artifacts and exhibits weave a captivating narrative of the island's cultural evolution.</p>
+                <em>45 Coral Way</em>
+                <br />
+                <br />
+                <strong>The Wave Movie Theater</strong>
+                <p>Immerse yourself in entertainment at The Wave Movie Theater, Taniti's premier cinematic destination.</p>
+                <em>78 Palm Avenue</em>
+                <br />
+                <br />
+                <strong>Surf Suds Microbrewery</strong>
+                <p>Indulge your taste buds in the flavors of Taniti at Surf Suds Microbrewery. This craft brewery offers a laid-back atmosphere where you can sample a variety of locally brewed beers.</p>
+                <em>20 Sunset Boulevard</em>
+            </div>
+            
+        </section>
+        <section id="travel-cruise">
+            <div class="page-section-copy">
+                <strong>SkySoar Zipline Adventure</strong>
+                <p>Soar above the lush canopy and take in breathtaking views at SkySoar Zipline Adventure,</p>
+                <em>30 Treetop Terrace</em>
+                <br />
+                <br />
+                <strong>Molten Majesty Volcano Park</strong>
+                <p>This active volcano, with its awe-inspiring lava flows and volcanic landscapes, offers a unique opportunity to witness the dynamic forces that have shaped Taniti over the centuries.</p>
+                <em>15 Lava Lane</em>
+                <br />
+                <br />
+                <strong>Coral Currents Snorkel Haven</strong>
+                <p>Dive into the vibrant marine world at Coral Currents Snorkel Haven. Immerse yourself in crystal-clear waters teeming with colorful coral formations and tropical marine life.</p>
+                <em>10 Reef Road</em>
+            </div>
+            <div class="page-section-feature">
+                <h2>...And Take It All In</h2>
+                <img src="../assets/volcano.avif" alt="Taniti's active volcano." />
+            </div>
+        </section>
+    </main>
+
+    <footer><p>Copyright 2023 Sunny Solutions Inc.</p></footer>
+
+    <script>
+        function getCurrentTab() {
+            const title = document.querySelector("title").getAttribute("pageName");
+            const nav = document.querySelector(`a[data="${title}"]`);
+            nav.classList.remove("nav-unselect");
+            nav.classList.add("nav-select");
+        }
+        getCurrentTab();
+    </script>
+</body>
+</html>
